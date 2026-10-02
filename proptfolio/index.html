@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Tejaswini Kapu - Computer Science Student &amp; Aspiring Data Analyst specializing in Python, SQL, Power BI, Tableau, and Business Intelligence." />
+  <meta name="keywords"
+    content="Tejaswini Kapu, Data Analytics, Power BI, Tableau, Python, SQL, Business Intelligence, Vignan's Nirula, Student Portfolio" />
+  <title>Tejaswini Kapu | Computer Science &amp; Data Analytics</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons (Local Offline Self-Hosted) -->
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Background Interactive Particle Constellation Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Ambient Red Spotlight & Laser Mesh -->
+  <div class="ambient-spotlight" id="ambientSpotlight"></div>
+  <div class="mesh-background">
+    <div class="mesh-blob red-blob-1"></div>
+    <div class="mesh-blob red-blob-2"></div>
+    <div class="mesh-blob red-blob-3"></div>
+  </div>
+
+  <!-- Mobile Navigation Dimming Backdrop -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <span class="logo-symbol">&lt;TK /&gt;</span>
+        <span class="logo-text">TEJASWINI<span class="red-text">.DEV</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house nav-icon"></i><span>Home</span></a></li>
+          <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap nav-icon"></i><span>Education</span></a></li>
+          <li><a href="#about" class="nav-link"><i class="fa-solid fa-user-gear nav-icon"></i><span>About &amp; Skills</span></a></li>
+          <li><a href="#internship" class="nav-link"><i class="fa-solid fa-briefcase nav-icon"></i><span>Internship</span></a></li>
+          <li><a href="#projects" class="nav-link"><i class="fa-solid fa-chart-pie nav-icon"></i><span>Projects</span></a></li>
+          <li><a href="#coding-stats" class="nav-link"><i class="fa-solid fa-chart-simple nav-icon"></i><span>Analytics Stats</span></a></li>
+          <li><a href="#terminal" class="nav-link"><i class="fa-solid fa-terminal nav-icon"></i><span>Terminal</span></a></li>
+          <li><a href="#achievements" class="nav-link"><i class="fa-solid fa-award nav-icon"></i><span>Certifications</span></a></li>
+          <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope nav-icon"></i><span>Contact</span></a></li>
+          <li class="mobile-menu-cta">
+            <button class="btn btn-red btn-sm glowing-red-btn" id="mobileResumeNavBtn">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>View &amp; Download Resume</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="status-badge pulse-red">
+          <span class="status-dot"></span>
+          <span class="status-text">Open to Analytics Roles</span>
+        </div>
+        <button class="btn btn-glass btn-sm" id="viewResumeNavBtn">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-red btn-sm glowing-red-btn" id="navCtaBtn">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill hero-pill">
+            <i class="fa-solid fa-chart-line text-red"></i>
+            <span>B.Tech CSE &bull; CGPA: 8.47/10 &bull; Vignan's Nirula</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="red-gradient-text">Tejaswini!</span> 👋 <br />
+            <span class="type-target" id="typingText"></span>
+            <span class="cursor-blink">|</span>
+          </h1>
+
+          <p class="hero-description">
+            Motivated Computer Science Engineering student aspiring to build a career in Data Analytics with skills in
+            Python, SQL, Power BI, Tableau, and Excel. Passionate about data visualization, business insights, and
+            analytical problem-solving.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-red btn-lg glowing-red-btn">
+              <i class="fa-solid fa-chart-pie"></i>
+              <span>Explore Analytics Dashboards</span>
+            </a>
+            <button class="btn btn-glass btn-lg" id="downloadResumeHeroBtn">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>View &amp; Download Resume</span>
+            </button>
+          </div>
+
+          <div class="hero-social-proof">
+            <div class="client-avatars">
+              <span class="avatar-circle"><i class="fa-solid fa-chart-column"></i></span>
+              <span class="avatar-circle"><i class="fa-solid fa-database"></i></span>
+              <span class="avatar-circle"><i class="fa-solid fa-award"></i></span>
+              <span class="avatar-circle extra">BI</span>
+            </div>
+            <div class="proof-text">
+              <div class="stars">
+                <i class="fa-solid fa-star text-red"></i>
+                <i class="fa-solid fa-star text-red"></i>
+                <i class="fa-solid fa-star text-red"></i>
+                <i class="fa-solid fa-star text-red"></i>
+                <i class="fa-solid fa-star text-red"></i>
+              </div>
+              <p>Infosys Springboard Intern &bull; TCS iON NQT &bull; 7+ Certifications</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Student Photo Card with Pure Circular Frame & Live Animations -->
+        <div class="hero-visual-wrapper">
+          <div class="avatar-3d-card circular-card" id="avatar3DCard">
+            <div class="orbit-ring ring-red-1"></div>
+            <div class="orbit-ring ring-red-2"></div>
+            <div class="avatar-glow-red circular-glow"></div>
+
+            <div class="avatar-frame circular-frame">
+              <img src="assets/images/hero-avatar.jpg" alt="Tejaswini Kapu - Computer Science &amp; Data Analytics Student" class="avatar-img" />
+            </div>
+
+            <!-- Floating Badges neatly positioned around the circle -->
+            <div class="floating-badge badge-top-left float-anim-1">
+              <i class="fa-brands fa-python text-red"></i>
+              <span>Python &bull; SQL</span>
+            </div>
+            <div class="floating-badge badge-top-right float-anim-2">
+              <i class="fa-solid fa-chart-pie" style="color: #f7df1e;"></i>
+              <span>Power BI &bull; DAX</span>
+            </div>
+            <div class="floating-badge badge-bottom-left float-anim-3">
+              <i class="fa-solid fa-chart-simple text-red"></i>
+              <span>Tableau &bull; Excel</span>
+            </div>
+            <div class="floating-badge badge-bottom-right float-anim-1">
+              <i class="fa-brands fa-java text-red"></i>
+              <span>Java &bull; MySQL</span>
+            </div>
+
+            <!-- Sleek Name Badge under Circle -->
+            <div class="avatar-center-name-badge">
+              <span class="pulse-dot"></span>
+              <strong>Tejaswini Kapu</strong> &bull; Aspiring Data Analyst
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="container">
+        <div class="metrics-card glass-panel" id="metricsStrip">
+          <div class="metric-item">
+            <h3 class="counter" data-target="8">0</h3><span class="metric-plus">.47</span>
+            <p>B.Tech CGPA</p>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <h3 class="counter" data-target="96">0</h3><span class="metric-plus">%</span>
+            <p>Intermediate Score</p>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <h3 class="counter" data-target="7">0</h3><span class="metric-plus">+</span>
+            <p>Industry Certifications</p>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <h3 class="counter" data-target="3">0</h3><span class="metric-plus">+</span>
+            <p>BI &amp; Analytics Projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & TIMELINE SECTION -->
+    <section class="education-section section-padding" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-pill"><i class="fa-solid fa-graduation-cap text-red"></i> Academic Background</div>
+          <h2 class="section-title">Education &amp; <span class="red-gradient-text">Milestones</span></h2>
+          <p class="section-subtitle">Consistent academic excellence paired with specialized training in data analysis and engineering.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Card 1 -->
+          <div class="edu-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="edu-icon"><i class="fa-solid fa-university"></i></div>
+            <div class="edu-period">2023 - 2027 (Expected)</div>
+            <h3>Bachelor of Technology in Computer Science (CSE)</h3>
+            <h4 class="text-red">Vignan's Nirula Institute Of Technology And Science For Women &bull; CGPA: 8.47 / 10.0</h4>
+            <p>
+              Core Studies: Database Management Systems (DBMS), SQL, Python Programming, Object-Oriented Programming with Java, Data Structures &amp; Algorithms, Computer Networks, Operating Systems.
+            </p>
+            <div class="edu-tags">
+              <span class="tag">B.Tech CSE</span>
+              <span class="tag">CGPA: 8.47</span>
+              <span class="tag">Data Analytics Focus</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="edu-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="edu-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="edu-period">2021 - 2023</div>
+            <h3>Senior Secondary Education (Class XII)</h3>
+            <h4 class="text-red">Narayana Junior College &bull; 96.0%</h4>
+            <p>
+              Andhra Pradesh State Board of Intermediate Education with Mathematics, Physics, and Chemistry (MPC). Secured outstanding distinction with 96% aggregate.
+            </p>
+            <div class="edu-tags">
+              <span class="tag">96% Score</span>
+              <span class="tag">AP State Board</span>
+              <span class="tag">Academic Distinction</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="edu-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="edu-period">Completed 2021</div>
+            <h3>Secondary School Certificate (Class X)</h3>
+            <h4 class="text-red">Oxford High School &bull; Board of Secondary Education, AP</h4>
+            <p>
+              Strong academic foundation with highest honors in Mathematics and Science subjects, preparing the analytical grounding for computer science engineering.
+            </p>
+            <div class="edu-tags">
+              <span class="tag">Class X AP Board</span>
+              <span class="tag">Oxford High School</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & SKILLS SECTION -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-pill"><i class="fa-solid fa-sparkles text-red"></i> Technical Competence</div>
+          <h2 class="section-title">Skills &amp; <span class="red-gradient-text">Core Competencies</span></h2>
+          <p class="section-subtitle">Bridging data queries, mathematical reasoning, and intuitive interactive visualization dashboards.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio-card glass-panel">
+            <div class="laser-border"></div>
+            <div class="bio-header">
+              <div class="avatar-mini">
+                <img src="assets/images/hero-avatar.jpg" alt="Tejaswini Kapu Mini" />
+              </div>
+              <div>
+                <h3>Tejaswini Kapu</h3>
+                <p class="text-red">Aspiring Data Analyst &amp; BI Developer</p>
+              </div>
+            </div>
+            <p class="bio-text">
+              I am passionate about turning complex raw data into actionable business intelligence. Experienced in developing interactive Power BI and Tableau dashboards, writing optimized SQL queries, statistical analysis, and transforming supply chain &amp; sales data into visual narratives.
+            </p>
+            <div class="bio-highlights">
+              <div class="highlight-box">
+                <i class="fa-solid fa-circle-check text-red"></i>
+                <span>Power BI, DAX &amp; Power Query ETL</span>
+              </div>
+              <div class="highlight-box">
+                <i class="fa-solid fa-circle-check text-red"></i>
+                <span>Python &amp; SQL Query Optimization</span>
+              </div>
+              <div class="highlight-box">
+                <i class="fa-solid fa-circle-check text-red"></i>
+                <span>Tableau Visual Trend Analysis</span>
+              </div>
+              <div class="highlight-box">
+                <i class="fa-solid fa-circle-check text-red"></i>
+                <span>Analytical Problem Solving &amp; Leadership</span>
+              </div>
+            </div>
+
+            <div class="bio-actions">
+              <a href="#contact" class="btn btn-red glowing-red-btn">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Get in Touch</span>
+              </a>
+              <button class="btn btn-glass" id="downloadCvBtn">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span>View Resume</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Skill Meters -->
+          <div class="skills-card glass-panel">
+            <div class="laser-border"></div>
+            <div class="skills-header">
+              <h3>Technical Skills &amp; Proficiency</h3>
+              <p>Tools, languages, and analytics ecosystems I work with daily.</p>
+            </div>
+
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span><i class="fa-brands fa-python text-red"></i> Python &bull; Data Manipulation &amp; Analytics</span>
+                  <span class="skill-percent" data-target="92">0%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="--skill-width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span><i class="fa-solid fa-database text-red"></i> SQL &bull; MySQL Queries, Joins &amp; Schemas</span>
+                  <span class="skill-percent" data-target="90">0%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="--skill-width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span><i class="fa-solid fa-chart-pie" style="color:#f7df1e;"></i> Power BI &bull; DAX &amp; Power Query</span>
+                  <span class="skill-percent" data-target="94">0%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="--skill-width: 94%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span><i class="fa-solid fa-chart-simple text-red"></i> Tableau &bull; Dashboards &amp; Visual Analytics</span>
+                  <span class="skill-percent" data-target="88">0%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="--skill-width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span><i class="fa-solid fa-file-excel text-red"></i> Microsoft Excel &bull; Formulas &amp; Pivots</span>
+                  <span class="skill-percent" data-target="89">0%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="--skill-width: 89%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span><i class="fa-brands fa-java text-red"></i> Java &bull; Object-Oriented Programming</span>
+                  <span class="skill-percent" data-target="82">0%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="--skill-width: 82%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Stack Pills -->
+            <div class="tech-stack-pills">
+              <span class="tech-pill"><i class="fa-brands fa-python text-red"></i> Python</span>
+              <span class="tech-pill"><i class="fa-solid fa-database text-red"></i> SQL / MySQL</span>
+              <span class="tech-pill"><i class="fa-solid fa-chart-pie text-red"></i> Power BI</span>
+              <span class="tech-pill"><i class="fa-solid fa-chart-simple text-red"></i> Tableau</span>
+              <span class="tech-pill"><i class="fa-solid fa-file-excel text-red"></i> MS Excel</span>
+              <span class="tech-pill"><i class="fa-brands fa-java text-red"></i> Java</span>
+              <span class="tech-pill"><i class="fa-solid fa-filter text-red"></i> Power Query</span>
+              <span class="tech-pill"><i class="fa-solid fa-calculator text-red"></i> DAX Measures</span>
+              <span class="tech-pill"><i class="fa-solid fa-code text-red"></i> VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNSHIP EXPERIENCE SECTION -->
+    <section class="internship-section section-padding" id="internship">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-pill"><i class="fa-solid fa-briefcase text-red"></i> Practical Industry Experience</div>
+          <h2 class="section-title">Internship &amp; <span class="red-gradient-text">Work Experience</span></h2>
+          <p class="section-subtitle">Real-world analytics pipelines, data cleaning, and KPI dashboard development.</p>
+        </div>
+
+        <div class="glass-panel tilt-card" style="padding: 36px 32px; border-radius: var(--radius-lg); position: relative;">
+          <div class="laser-border"></div>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px;">
+            <div>
+              <span class="badge-pill" style="margin-bottom: 12px; display: inline-flex;"><i class="fa-solid fa-building text-red"></i> Infosys Springboard</span>
+              <h3 style="font-size: 1.6rem; color: #fff; margin-bottom: 6px;">Data Analytics &amp; Business Intelligence Intern</h3>
+              <h4 class="text-red" style="font-size: 1.1rem; font-weight: 600;">Infosys Springboard Virtual Internship 7.0</h4>
+            </div>
+            <div style="text-align: right;">
+              <span class="tag" style="background: rgba(255,30,66,0.15); color: var(--accent-red); border: 1px solid var(--accent-red); font-weight: 700; padding: 6px 14px; font-size: 0.9rem;">Virtual Internship</span>
+            </div>
+          </div>
+
+          <div style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin-bottom: 24px;">
+            <p>
+              Worked on the <strong>Supply Chain Visibility System with Optimization Analytics</strong>. Leveraged <strong>Power BI</strong> and <strong>Power Query</strong> to ingest, clean, and transform multi-source supply chain datasets, eliminating inconsistencies and preparing unified data models.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+            <div class="highlight-box">
+              <i class="fa-solid fa-circle-check text-red"></i>
+              <span><strong>DAX KPIs:</strong> Engineered dynamic measures for on-time delivery rates, lead times &amp; freight costs.</span>
+            </div>
+            <div class="highlight-box">
+              <i class="fa-solid fa-circle-check text-red"></i>
+              <span><strong>Multi-Dimensional Analysis:</strong> Analyzed sales, customer, delivery, regional, and profitability data.</span>
+            </div>
+            <div class="highlight-box">
+              <i class="fa-solid fa-circle-check text-red"></i>
+              <span><strong>Executive Dashboards:</strong> Designed interactive drill-through visualizations for supply chain leaders.</span>
+            </div>
+            <div class="highlight-box">
+              <i class="fa-solid fa-circle-check text-red"></i>
+              <span><strong>Actionable Insights:</strong> Generated strategic business recommendations to reduce logistics delays.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section section-padding" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-pill"><i class="fa-solid fa-folder-open text-red"></i> Analytical Portfolio</div>
+          <h2 class="section-title">Data Dashboards &amp; <span class="red-gradient-text">Academic Projects</span></h2>
+          <p class="section-subtitle">Transforming raw enterprise and consumer datasets into interactive decision engines.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-wrapper">
+          <button class="filter-btn active" data-filter="all">All Analytics Projects</button>
+          <button class="filter-btn" data-filter="powerbi">Power BI</button>
+          <button class="filter-btn" data-filter="tableau">Tableau Dashboards</button>
+          <button class="filter-btn" data-filter="python">Python &amp; SQL</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card glass-panel tilt-card" data-category="powerbi python">
+            <div class="laser-border"></div>
+            <div class="project-img-box">
+              <img src="assets/images/project-saas.jpg" alt="Customer Segmentation &amp; Behavior Analysis" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-red btn-sm open-preview-btn" data-title="Customer Segmentation &amp; Behavior Analysis"
+                  data-desc="In-depth analysis of consumer purchasing habits, spending patterns, and demographics to identify high-value customer cohorts."
+                  data-img="assets/images/project-saas.jpg" data-tags="Python, SQL, Power BI, DAX, Data Modeling"
+                  data-arch="Built end-to-end data pipeline: cleaned transactional records with Python and SQL queries, designed star schema models in Power BI, and computed customer lifetime value metrics via DAX."
+                  data-features="RFM Segmentation (Recency, Frequency, Monetary), Interactive cohort filter slicers, Demographic revenue breakdown, Retention rate forecasting dashboard">
+                  <i class="fa-solid fa-eye"></i> Quick View &amp; Architecture
+                </button>
+              </div>
+              <span class="project-cat-badge">Power BI &amp; SQL</span>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Power BI</span>
+              </div>
+              <h3 class="project-title">Customer Segmentation &amp; Behavior Analysis</h3>
+              <p class="project-desc">Analyzed customer purchasing behavior and built interactive Power BI dashboards to identify key customer segments and strategic business insights.</p>
+              <div class="project-footer">
+                <button class="project-action-btn open-preview-btn" data-title="Customer Segmentation &amp; Behavior Analysis"
+                  data-desc="In-depth analysis of consumer purchasing habits, spending patterns, and demographics to identify high-value customer cohorts."
+                  data-img="assets/images/project-saas.jpg" data-tags="Python, SQL, Power BI, DAX, Data Modeling"
+                  data-arch="Built end-to-end data pipeline: cleaned transactional records with Python and SQL queries, designed star schema models in Power BI, and computed customer lifetime value metrics via DAX."
+                  data-features="RFM Segmentation (Recency, Frequency, Monetary), Interactive cohort filter slicers, Demographic revenue breakdown, Retention rate forecasting dashboard">
+                  <span>View Case Study &amp; Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card glass-panel tilt-card" data-category="tableau">
+            <div class="laser-border"></div>
+            <div class="project-img-box">
+              <img src="assets/images/project-app.jpg" alt="Netflix Data Analysis Dashboard" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-red btn-sm open-preview-btn" data-title="Netflix Data Analysis Dashboard"
+                  data-desc="Interactive visual analytics dashboard evaluating global streaming trends, content distributions, rating classifications, and release dynamics."
+                  data-img="assets/images/project-app.jpg" data-tags="Tableau, Data Visualization, EDA, Excel"
+                  data-arch="Performed Exploratory Data Analysis (EDA) on 8,000+ title catalog records. Built dynamic parameters, calculated fields, and interactive map charts in Tableau."
+                  data-features="Global country-wise content heatmap, Genre trend distributions over 20+ years, Movie vs TV show duration comparisons, Content maturity rating breakdown">
+                  <i class="fa-solid fa-eye"></i> Quick View &amp; Architecture
+                </button>
+              </div>
+              <span class="project-cat-badge">Tableau Dashboard</span>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Tableau</span>
+                <span class="tag">EDA</span>
+                <span class="tag">Data Visualization</span>
+              </div>
+              <h3 class="project-title">Netflix Content &amp; Trend Analytics</h3>
+              <p class="project-desc">Built an interactive Tableau dashboard to analyze streaming genres, ratings, geographical origin, and historical release velocity.</p>
+              <div class="project-footer">
+                <button class="project-action-btn open-preview-btn" data-title="Netflix Data Analysis Dashboard"
+                  data-desc="Interactive visual analytics dashboard evaluating global streaming trends, content distributions, rating classifications, and release dynamics."
+                  data-img="assets/images/project-app.jpg" data-tags="Tableau, Data Visualization, EDA, Excel"
+                  data-arch="Performed Exploratory Data Analysis (EDA) on 8,000+ title catalog records. Built dynamic parameters, calculated fields, and interactive map charts in Tableau."
+                  data-features="Global country-wise content heatmap, Genre trend distributions over 20+ years, Movie vs TV show duration comparisons, Content maturity rating breakdown">
+                  <span>View Case Study &amp; Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card glass-panel tilt-card" data-category="tableau">
+            <div class="laser-border"></div>
+            <div class="project-img-box">
+              <img src="assets/images/project-ai.jpg" alt="Superstore Sales Analysis Dashboard" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-red btn-sm open-preview-btn"
+                  data-title="Superstore Sales Analysis Dashboard"
+                  data-desc="Comprehensive commercial retail telemetry dashboard tracking revenue, profit margins, shipping efficiencies, and discount impacts across territories."
+                  data-img="assets/images/project-ai.jpg" data-tags="Tableau, Business Intelligence, Sales KPI, Excel"
+                  data-arch="Synthesized enterprise retail datasets using Tableau blending and advanced filters. Built dual-axis charts, profit-ratio KPIs, and hierarchical geographical drill-downs."
+                  data-features="Regional profit vs loss diagnostic maps, Product category margin contributors, Customer segment performance index, Shipping mode latency impact analysis">
+                  <i class="fa-solid fa-eye"></i> Quick View &amp; Architecture
+                </button>
+              </div>
+              <span class="project-cat-badge">Business Intelligence</span>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Tableau</span>
+                <span class="tag">Sales KPIs</span>
+                <span class="tag">Regional Analytics</span>
+              </div>
+              <h3 class="project-title">Superstore Sales &amp; Profitability Dashboard</h3>
+              <p class="project-desc">Analyzed enterprise sales, profitability metrics, customer cohorts, and regional shipping performance to identify revenue growth levers.</p>
+              <div class="project-footer">
+                <button class="project-action-btn open-preview-btn"
+                  data-title="Superstore Sales Analysis Dashboard"
+                  data-desc="Comprehensive commercial retail telemetry dashboard tracking revenue, profit margins, shipping efficiencies, and discount impacts across territories."
+                  data-img="assets/images/project-ai.jpg" data-tags="Tableau, Business Intelligence, Sales KPI, Excel"
+                  data-arch="Synthesized enterprise retail datasets using Tableau blending and advanced filters. Built dual-axis charts, profit-ratio KPIs, and hierarchical geographical drill-downs."
+                  data-features="Regional profit vs loss diagnostic maps, Product category margin contributors, Customer segment performance index, Shipping mode latency impact analysis">
+                  <span>View Case Study &amp; Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CODING STATS & TCS NQT TELEMETRY -->
+    <section class="coding-stats-section section-padding" id="coding-stats">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-pill"><i class="fa-solid fa-chart-simple text-red"></i> Performance Telemetry</div>
+          <h2 class="section-title">TCS iON NQT &amp; <span class="red-gradient-text">Problem Solving</span></h2>
+          <p class="section-subtitle">Validated quantitative aptitude, logical reasoning, and programming competency.</p>
+        </div>
+
+        <div class="stats-double-grid">
+          <!-- TCS iON NQT Breakdown Card -->
+          <div class="stats-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="card-top-header">
+              <div class="platform-icon"><i class="fa-solid fa-brain text-red"></i></div>
+              <div>
+                <h3>TCS iON NQT (National Qualifier Test)</h3>
+                <p class="text-red">Information Technology Qualifier &bull; Aug 2026</p>
+              </div>
+            </div>
+
+            <div class="leetcode-circle-container">
+              <div class="lc-circle-wrapper">
+                <div class="lc-total-number">62%</div>
+                <div class="lc-total-label">Overall</div>
+              </div>
+              <div class="lc-bars-breakdown">
+                <div class="lc-bar-item">
+                  <div class="lc-bar-meta">
+                    <span class="text-green"><i class="fa-solid fa-circle"></i> Advanced Reasoning</span>
+                    <span>75.55%</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill bg-green" style="width: 76%;"></div>
+                  </div>
+                </div>
+
+                <div class="lc-bar-item">
+                  <div class="lc-bar-meta">
+                    <span class="text-yellow"><i class="fa-solid fa-circle"></i> Programming (Python)</span>
+                    <span>60.34%</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill bg-yellow" style="width: 60%;"></div>
+                  </div>
+                </div>
+
+                <div class="lc-bar-item">
+                  <div class="lc-bar-meta">
+                    <span class="text-red"><i class="fa-solid fa-circle"></i> Overall Score</span>
+                    <span>61.92%</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill bg-red" style="width: 62%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lc-stats-pills">
+              <div class="lc-mini-pill">
+                <strong>75.55%</strong>
+                <span>Reasoning Score</span>
+              </div>
+              <div class="lc-mini-pill">
+                <strong>Python</strong>
+                <span>NQT Language</span>
+              </div>
+              <div class="lc-mini-pill">
+                <strong>Certified</strong>
+                <span>IT Qualifier</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem Solving & Skill Matrix Card -->
+          <div class="stats-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="card-top-header">
+              <div class="platform-icon"><i class="fa-solid fa-chart-line text-red"></i></div>
+              <div>
+                <h3>Analytical Focus &amp; Tools Proficiency</h3>
+                <p class="text-red">Multi-discipline data engineering &amp; analytics capabilities</p>
+              </div>
+            </div>
+
+            <!-- Simulated GitHub Commit Heatmap Grid (Red Theme) -->
+            <div class="github-heatmap-container">
+              <div class="heatmap-months">
+                <span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Nov</span>
+              </div>
+              <div class="heatmap-grid" id="githubHeatmapGrid">
+                <!-- 52 weeks generated by CSS/JS -->
+              </div>
+              <div class="heatmap-legend">
+                <span>Less</span>
+                <span class="heat-box lvl-0"></span>
+                <span class="heat-box lvl-1"></span>
+                <span class="heat-box lvl-2"></span>
+                <span class="heat-box lvl-3"></span>
+                <span class="heat-box lvl-4"></span>
+                <span>More</span>
+              </div>
+            </div>
+
+            <!-- Language Breakdown Strip -->
+            <div class="lang-breakdown">
+              <div class="lang-bar">
+                <span style="width: 35%; background: #3776ab;" title="Python 35%"></span>
+                <span style="width: 30%; background: #f2c811;" title="Power BI & DAX 30%"></span>
+                <span style="width: 20%; background: #e8762d;" title="SQL / MySQL 20%"></span>
+                <span style="width: 15%; background: #1f77b4;" title="Tableau 15%"></span>
+              </div>
+              <div class="lang-labels">
+                <span><i class="fa-solid fa-circle" style="color:#3776ab;"></i> Python 35%</span>
+                <span><i class="fa-solid fa-circle" style="color:#f2c811;"></i> Power BI 30%</span>
+                <span><i class="fa-solid fa-circle" style="color:#e8762d;"></i> SQL 20%</span>
+                <span><i class="fa-solid fa-circle" style="color:#1f77b4;"></i> Tableau 15%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEVELOPER TERMINAL / CLI -->
+    <section class="terminal-section section-padding" id="terminal">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-pill"><i class="fa-solid fa-terminal text-red"></i> Analytics Console</div>
+          <h2 class="section-title">Interactive <span class="red-gradient-text">CLI Terminal</span></h2>
+          <p class="section-subtitle">Type commands or click quick action chips to explore Tejaswini's profile like a pro!</p>
+        </div>
+
+        <div class="terminal-window glass-panel">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">tejaswini@portfolio-terminal: ~ (bash)</div>
+            <div class="terminal-status"><span class="pulse-dot"></span> LIVE</div>
+          </div>
+
+          <div class="terminal-quick-chips">
+            <span class="chip-label">Quick Commands:</span>
+            <button class="term-chip" data-cmd="help">help</button>
+            <button class="term-chip" data-cmd="skills">skills</button>
+            <button class="term-chip" data-cmd="projects">projects</button>
+            <button class="term-chip" data-cmd="internship">internship</button>
+            <button class="term-chip" data-cmd="education">education</button>
+            <button class="term-chip" data-cmd="certifications">certifications</button>
+            <button class="term-chip" data-cmd="contact">contact</button>
+            <button class="term-chip" data-cmd="resume">resume</button>
+            <button class="term-chip" data-cmd="clear">clear</button>
+          </div>
+
+          <div class="terminal-body" id="terminalBody">
+            <div class="term-line output-line">
+              <span class="text-red">⚡ Welcome to Tejaswini Kapu's Data Analytics Portfolio CLI v2.5!</span><br />
+              <span>Type <strong class="text-red">help</strong> to see available commands or click the chips above.</span>
+            </div>
+          </div>
+
+          <form id="terminalForm" class="terminal-input-row">
+            <span class="term-prompt"><span class="text-red">tejaswini@dev</span>:<span class="text-dim">~</span>$</span>
+            <input type="text" id="terminalInput" placeholder="Type a command (e.g. skills, projects, internship, resume)..."
+              autocomplete="off" />
+            <button type="submit" class="term-submit-btn"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CERTIFICATIONS -->
+    <section class="achievements-section section-padding" id="achievements">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-pill"><i class="fa-solid fa-award text-red"></i> Verified Credentials</div>
+          <h2 class="section-title">Certifications &amp; <span class="red-gradient-text">Accolades</span></h2>
+          <p class="section-subtitle">Industry credentials across Data Analytics, Python, Java, Power BI, and Cloud Systems.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="service-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>TCS iON NQT – IT Qualifier</h3>
+            <p>Scored 75.55% in Advanced Reasoning and 60.34% in Python Programming. Overall score: 61.92%.</p>
+            <div class="card-badge">TCS iON 2026</div>
+          </div>
+
+          <div class="service-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <h3>NPTEL Certifications (Python &amp; Java)</h3>
+            <p>Earned NPTEL certifications in "The Joy of Computing using Python" and "Programming in Java" with distinction.</p>
+            <div class="card-badge">NPTEL Certified</div>
+          </div>
+
+          <div class="service-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h3>TechA &amp; Infosys Power BI Certification</h3>
+            <p>TechA Data Analytics using Power BI Foundation and Power BI for Business Professionals via Infosys Springboard.</p>
+            <div class="card-badge">Infosys Certified</div>
+          </div>
+
+          <div class="service-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>Cisco Academy – Python Essentials</h3>
+            <p>Certified in Python core language fundamentals, data structures, algorithms, and modular software design.</p>
+            <div class="card-badge">Cisco Academy</div>
+          </div>
+
+          <div class="service-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>Deloitte Data Analytics Simulation</h3>
+            <p>Completed hands-on data analytics job simulation tackling real-world business challenges and visual reporting.</p>
+            <div class="card-badge">Deloitte</div>
+          </div>
+
+          <div class="service-card glass-panel tilt-card">
+            <div class="laser-border"></div>
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-table"></i>
+            </div>
+            <h3>Excel for Business Professionals</h3>
+            <p>Advanced data preparation, pivot tables, lookup functions, and analytical modeling via Infosys Springboard.</p>
+            <div class="card-badge">Infosys Excel</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & INQUIRY SECTION (100% Privacy - NO Phone Number) -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge-pill"><i class="fa-solid fa-paper-plane text-red"></i> Let's Connect</div>
+          <h2 class="section-title">Let's Discuss <span class="red-gradient-text">Opportunities!</span></h2>
+          <p class="section-subtitle">Reach out for Data Analytics internships, entry-level BI roles, project collaborations, or professional networking.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card glass-panel">
+            <div class="laser-border"></div>
+            <h3>Get in touch directly</h3>
+            <p>I am actively checking emails and LinkedIn messages for exciting data analyst roles, internships, and data project collaborations.</p>
+
+            <div class="contact-methods">
+              <a href="mailto:tejaswinikapu7@gmail.com" class="contact-method-item">
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <h4>Email Me</h4>
+                  <p>tejaswinikapu7@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/kapu-tejaswini-48b4a0299" target="_blank" rel="noopener" class="contact-method-item">
+                <div class="method-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div>
+                  <h4>LinkedIn Profile</h4>
+                  <p>linkedin.com/in/kapu-tejaswini-48b4a0299</p>
+                </div>
+              </a>
+
+              <div class="contact-method-item">
+                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Andhra Pradesh, India</p>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="method-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                  <h4>Response Time</h4>
+                  <p>Usually within 2 to 4 hours</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="guarantee-box">
+              <i class="fa-solid fa-graduation-cap text-red"></i>
+              <div>
+                <strong>Passionate &amp; Dedicated</strong>
+                <p>Committed to high-quality analysis, continuous learning, and driving data-driven business impact.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card glass-panel">
+            <div class="laser-border"></div>
+            <form id="portfolioContactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <!-- Web3Forms Integration with Tejaswini's Form Access Key -->
+              <input type="hidden" name="access_key" id="web3FormsKey" value="8c53dde9-5046-4541-8ccc-60483696ad1c" />
+              <input type="hidden" name="subject" value="New Portfolio Message from Recruiter / Visitor" />
+              <input type="hidden" name="from_name" value="Tejaswini Portfolio Contact Form" />
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="userName">Your Full Name *</label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="userName" name="name" placeholder="e.g. Recruiter / Collaborator" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="userEmail">Your Email Address *</label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="userEmail" name="email" placeholder="your.name@company.com" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType">Purpose of Inquiry *</label>
+                <div class="input-wrapper select-wrapper">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <select id="projectType" name="inquiry_type" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="internship" selected>Data Analytics Internship / Full-time Role</option>
+                    <option value="project">BI &amp; Dashboard Analytics Project</option>
+                    <option value="mentorship">Professional Networking &amp; Mentorship</option>
+                    <option value="general">General Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Your Message *</label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-regular fa-message"></i>
+                  <textarea id="userMessage" name="message" rows="4"
+                    placeholder="Share role details, project scope, or inquiries..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-red btn-block glowing-red-btn" id="submitFormBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+
+              <div class="form-footer-perks">
+                <div class="perk-item"><i class="fa-solid fa-bolt text-red"></i> <span>2-4h Response</span></div>
+                <div class="perk-item"><i class="fa-solid fa-shield-halved text-red"></i> <span>Zero Spam</span></div>
+                <div class="perk-item"><i class="fa-solid fa-circle-check text-red"></i> <span>Direct Inbox</span></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- IN-BROWSER INTERACTIVE RESUME MODAL -->
+  <div class="modal-backdrop" id="resumeModalBackdrop">
+    <div class="modal-dialog glass-panel" id="resumeModalDialog" style="max-width: 820px;">
+      <button class="modal-close-btn" id="resumeModalCloseBtn" aria-label="Close modal"><i
+          class="fa-solid fa-xmark"></i></button>
+      <div class="resume-modal-header">
+        <div class="resume-header-left">
+          <div class="avatar-mini"><img src="assets/images/hero-avatar.jpg" alt="Tejaswini Kapu" /></div>
+          <div>
+            <h3>Tejaswini Kapu</h3>
+            <p class="text-red">B.Tech CSE &bull; Vignan's Nirula &bull; CGPA: 8.47 / 10</p>
+          </div>
+        </div>
+        <a href="Kapu_Tejaswini_Resume-2.pdf" download="Kapu_Tejaswini_Resume.pdf" class="btn btn-red btn-sm glowing-red-btn" id="resumeDownloadDirectBtn">
+          <i class="fa-solid fa-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="resume-modal-body">
+        <div class="resume-section">
+          <h4><i class="fa-solid fa-bullseye text-red"></i> Career Objective</h4>
+          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+            Motivated Computer Science student aspiring to build a career in Data Analytics with skills in Python, SQL, Power BI, Tableau, and Excel. Passionate about data visualization, business insights, and analytical problem-solving.
+          </p>
+        </div>
+
+        <div class="resume-section">
+          <h4><i class="fa-solid fa-graduation-cap text-red"></i> Education</h4>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <strong>B.Tech in Computer Science &amp; Engineering</strong>
+              <span class="text-red">2023 – 2027</span>
+            </div>
+            <p>Vignan’s Nirula Institute Of Technology And Science For Women &bull; CGPA: <strong>8.47 / 10.0</strong></p>
+          </div>
+          <div class="resume-item" style="margin-top: 10px;">
+            <div class="resume-item-header">
+              <strong>Senior Secondary (Intermediate - MPC)</strong>
+              <span class="text-red">2021 – 2023</span>
+            </div>
+            <p>Narayana Junior College &bull; Percentage: <strong>96.0%</strong></p>
+          </div>
+          <div class="resume-item" style="margin-top: 10px;">
+            <div class="resume-item-header">
+              <strong>Secondary School Certificate (Class X)</strong>
+              <span class="text-red">2021</span>
+            </div>
+            <p>Oxford High School &bull; Board of Secondary Education, AP</p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h4><i class="fa-solid fa-code text-red"></i> Technical Arsenal</h4>
+          <div class="resume-skills-grid">
+            <div><strong>Programming Languages:</strong> Python, SQL, Java</div>
+            <div><strong>Tools &amp; Analytics:</strong> Power BI, Tableau, Microsoft Excel, VS Code, Power Query, DAX</div>
+            <div><strong>Databases:</strong> MySQL</div>
+            <div><strong>Soft Skills:</strong> Self-motivated, Teamwork, Adaptable, Attention to Detail, Clear Communication</div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h4><i class="fa-solid fa-briefcase text-red"></i> Internship Experience</h4>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <strong>Infosys Springboard Virtual Internship 7.0 – Data Analytics &amp; Business Intelligence</strong>
+            </div>
+            <p class="resume-subtext">
+              Worked on Supply Chain Visibility System with Optimization Analytics, using Power BI and Power Query to clean and transform supply-chain data and develop interactive dashboards. Created DAX-based KPIs and analyzed sales, customer, delivery, regional, and profitability data to generate business insights.
+            </p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h4><i class="fa-solid fa-folder-open text-red"></i> Academic Projects</h4>
+          <ul class="resume-bullets">
+            <li><strong>Customer Segmentation &amp; Behavior Analysis (Python, SQL, Power BI):</strong> Analyzed customer purchasing behavior and built interactive dashboards to identify customer segments and business insights.</li>
+            <li><strong>Netflix Data Analysis Dashboard (Tableau):</strong> Built an interactive dashboard to analyze genres, ratings, and release trends.</li>
+            <li><strong>Superstore Sales Analysis Dashboard (Tableau):</strong> Analyzed sales, profit, customer segments, and regional performance.</li>
+          </ul>
+        </div>
+
+        <div class="resume-section">
+          <h4><i class="fa-solid fa-trophy text-red"></i> Certifications</h4>
+          <ul class="resume-bullets">
+            <li>NPTEL – The Joy of Computing using Python</li>
+            <li>NPTEL – Programming in Java</li>
+            <li>Cisco Academy – Python Essentials</li>
+            <li>TCS iON NQT (IT) – 61.92% overall (Advanced Reasoning: 75.55%, Programming – Python: 60.34%) | Aug 2026</li>
+            <li>TechA Data Analytics using Power BI Foundation Certification – Infosys Springboard</li>
+            <li>Power BI for Business Professionals, Excel – Infosys Springboard</li>
+            <li>Data Analytics Job Simulation – Deloitte</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENHANCED CASE STUDY PROJECT MODAL WITH ARCHITECTURE TABS -->
+  <div class="modal-backdrop" id="projectModalBackdrop">
+    <div class="modal-dialog glass-panel" id="projectModalDialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal"><i
+          class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body">
+        <div class="modal-img-container">
+          <img src="" alt="Project Preview" id="modalImg" class="modal-img" />
+        </div>
+        <div class="modal-details">
+          <div class="modal-tags" id="modalTags"></div>
+          <h3 id="modalTitle" class="modal-title">Project Title</h3>
+          <p id="modalDesc" class="modal-desc">Project Description details</p>
+
+          <!-- Tabbed Case Study Info -->
+          <div class="modal-case-study-box">
+            <div class="modal-tab-header">
+              <button class="modal-tab-btn active" data-tab="arch"><i class="fa-solid fa-layer-group"></i>
+                Technical Architecture</button>
+              <button class="modal-tab-btn" data-tab="features"><i class="fa-solid fa-list-check"></i> Key
+                Features &amp; Insights</button>
+            </div>
+            <div class="modal-tab-content" id="modalTabArch">
+              <p id="modalArchText" style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"></p>
+            </div>
+            <div class="modal-tab-content hidden" id="modalTabFeatures">
+              <ul id="modalFeaturesList" class="modal-feat-list"></ul>
+            </div>
+          </div>
+
+          <div class="modal-actions" style="margin-top: 20px;">
+            <a href="#contact" class="btn btn-red glowing-red-btn" id="modalCtaBtn">
+              <i class="fa-solid fa-envelope"></i> Inquire About This Analytics Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+    <div class="toast-content">
+      <h4 id="toastTitle">Success!</h4>
+      <p id="toastMessage">Your message has been received.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">&lt;TK /&gt;</span>
+          <span class="logo-text">TEJASWINI<span class="red-text">.DEV</span></span>
+        </a>
+        <p>High-Performance Data Analytics &amp; Student Portfolio.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#about">About &amp; Skills</a></li>
+          <li><a href="#internship">Internship</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#coding-stats">Analytics Stats</a></li>
+          <li><a href="#terminal">Terminal</a></li>
+          <li><a href="#achievements">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-socials">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/kapu-tejaswini-48b4a0299" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:tejaswinikapu7@gmail.com" aria-label="Email"><i
+              class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container bottom-row">
+        <p>&copy; 2026 Tejaswini Kapu. All rights reserved.</p>
+        <p class="designed-with">Built with <i class="fa-solid fa-heart text-red"></i> by <span class="text-red"
+            style="font-weight: 700;">Tejaswini Kapu</span> </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
